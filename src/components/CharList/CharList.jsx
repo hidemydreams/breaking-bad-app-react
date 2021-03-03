@@ -6,19 +6,17 @@ import { motion } from "framer-motion"
 export default class CharList extends Component {
   state = {
     characters: null,
-    selectedChar: null,
-    id: null,
+    selectedId: null,
   }
 
 
   handleMovieClick = (e) => {
     let clickedChar = this.state.characters.find((elem) => elem.name == e.target.id);
-    this.props.history.push({
-      pathname: '/character',
-      state: {
-        selectedChar: clickedChar,
-        id: this.state.characters.indexOf(clickedChar)
-      }
+    let index = this.state.characters.indexOf(clickedChar);
+    index++
+
+    this.setState({
+      selectedId: index,
     })
   }
 
@@ -36,13 +34,22 @@ export default class CharList extends Component {
   }
 
   render() {
+
+    console.log(this.state)
     return (
       <div className="outer">
         <div className="char-list">
           {this.state.characters ? this.state.characters.map((char, index) => {
             let id = index + 1
-            return <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} onClick={(e) => this.handleMovieClick(e)} key={char.name} className="char-list__item">
-              <div className="char-list__image"> <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} alt={char.name} id={char.name} />
+            return <motion.div
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}
+              onClick={(e) => this.handleMovieClick(e)}
+              key={char.name}
+              className="char-list__item">
+              <div
+                className="char-list__image">
+                <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+                  alt={char.name} id={char.name} />
                 <p className="char-list__name"><span>{char.name}</span></p>
               </div>
             </motion.div>

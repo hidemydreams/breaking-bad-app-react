@@ -4,25 +4,43 @@ import { motion } from "framer-motion"
 
 export default class SelectedChar extends Component {
 
-  render() {
-    let { state } = this.props.location
-    console.log(state)
+  state = {
+    oneChar: null
+  }
 
-    if (state) {
+  componentDidMount() {
+    this.getOneCharacter()
+  }
+
+  getOneCharacter = () => {
+    let url = `https://swapi.dev/api/people/1`
+    fetch(url).then(res => {
+      return res.json()
+    }).then(character => {
+      this.setState({
+        oneChar: character
+      })
+    })
+  }
+
+  render() {
+    const { id } = this.props.match.params
+
+    if (this.state) {
       return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} className="selected-char">
         <div className="selected-char__card item-card">
           <div className="item-card__image">
-            <img src={`https://starwars-visualguide.com/assets/img/characters/${this.props.location.state.id + 1}.jpg`} alt={this.props.location.state.selectedChar.name} />
+            <img src={`https://starwars-visualguide.com/assets/img/characters/1.jpg`} alt="Something" />
           </div>
           <div className="item-card__info">
-            <p>Name: <span>{this.props.location.state.selectedChar.name}</span></p>
-            <p>Height: <span>{this.props.location.state.selectedChar.height}</span></p>
-            <p>Mass: <span>{this.props.location.state.selectedChar.mass}</span></p>
-            <p>Hair Color: <span>{this.props.location.state.selectedChar.hair_color}</span></p>
-            <p>Skin Color: <span>{this.props.location.state.selectedChar.skin_color}</span></p>
-            <p>Eye Color: <span>{this.props.location.state.selectedChar.eye_color}</span></p>
-            <p>Birth Year: <span>{this.props.location.state.selectedChar.birth_year}</span></p>
-            <p>Gender: <span>{this.props.location.state.selectedChar.gender}</span></p>
+            <p>Name: <span></span></p>
+            <p>Height: <span>{ }</span></p>
+            <p>Mass: <span>{ }</span></p>
+            <p>Hair Color: <span>{ }</span></p>
+            <p>Skin Color: <span>{ }</span></p>
+            <p>Eye Color: <span>{ }</span></p>
+            <p>Birth Year: <span>{ }</span></p>
+            <p>Gender: <span>{ }</span></p>
           </div>
         </div>
       </motion.div>)

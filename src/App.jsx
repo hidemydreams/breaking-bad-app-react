@@ -14,7 +14,7 @@ function App() {
     <Switch>
       <Route exact path="/" render={(props) => <Home {...props} />} />
       <Route exact path="/characters" render={(props) => <CharList {...props} />} />
-      <Route exact path="/character" render={(props) => <SelectedChar {...props} />} />
+      <Route path="/characters/:id" render={(props) => <SelectedChar {...props} />} />
     </Switch>
   </div>;
 }
