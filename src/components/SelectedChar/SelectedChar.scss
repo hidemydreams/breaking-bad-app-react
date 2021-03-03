@@ -1,0 +1,43 @@
+.item-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__image img {
+    max-width: 280px;
+  }
+
+  &__info {
+    margin-left: 20px;
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.selected-char {
+  margin: 50px 0px;
+}
+
+.error {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}

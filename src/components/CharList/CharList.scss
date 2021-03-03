@@ -1,0 +1,47 @@
+.char-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .char-list__name {
+      bottom: -13px;
+    }
+
+    img {
+      max-width: 250px;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100%;
+    bottom: -100px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+  &__item {
+    margin: 20px 20px;
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      position: relative;
+      transform: translateY(-3%);
+    }
+  }
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
