@@ -14,7 +14,6 @@ export default class NavBar extends Component {
         <ul className="nav-bar__list">
           <NavLink to="/" exact={true}><li className="nav-bar__link">Home</li></NavLink>
           <NavLink to="/characters"><li className="nav-bar__link">Characters</li></NavLink>
-          <NavLink to="/character"><li className="nav-bar__link">Character</li></NavLink>
         </ul>
       </motion.div>
     )

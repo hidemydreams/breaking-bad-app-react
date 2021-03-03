@@ -12,15 +12,9 @@ export default class CharList extends Component {
 
   handleMovieClick = (e) => {
     let clickedChar = this.state.characters.find((elem) => elem.name == e.target.id);
-    let index = this.state.characters.indexOf(clickedChar);
-    index++
-
-    this.setState({
-      selectedId: index,
-    })
+    let index = this.state.characters.indexOf(clickedChar)
+    this.props.history.push(`/characters/${index + 1}`)
   }
-
-
 
   componentDidMount() {
     let url = 'https://swapi.dev/api/people/'
@@ -34,7 +28,7 @@ export default class CharList extends Component {
   }
 
   render() {
-
+    console.log(this.props)
     console.log(this.state)
     return (
       <div className="outer">
