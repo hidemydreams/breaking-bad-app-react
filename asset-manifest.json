@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/breaking-bad-app-react/static/css/main.65b79d41.chunk.css",
+    "main.js": "/breaking-bad-app-react/static/js/main.7be87815.chunk.js",
+    "main.js.map": "/breaking-bad-app-react/static/js/main.7be87815.chunk.js.map",
+    "runtime-main.js": "/breaking-bad-app-react/static/js/runtime-main.dfbf2355.js",
+    "runtime-main.js.map": "/breaking-bad-app-react/static/js/runtime-main.dfbf2355.js.map",
+    "static/js/2.a8626c65.chunk.js": "/breaking-bad-app-react/static/js/2.a8626c65.chunk.js",
+    "static/js/2.a8626c65.chunk.js.map": "/breaking-bad-app-react/static/js/2.a8626c65.chunk.js.map",
+    "index.html": "/breaking-bad-app-react/index.html",
+    "static/css/main.65b79d41.chunk.css.map": "/breaking-bad-app-react/static/css/main.65b79d41.chunk.css.map",
+    "static/js/2.a8626c65.chunk.js.LICENSE.txt": "/breaking-bad-app-react/static/js/2.a8626c65.chunk.js.LICENSE.txt",
+    "static/media/hero.d3a8f6bc.png": "/breaking-bad-app-react/static/media/hero.d3a8f6bc.png",
+    "static/media/star-wars.9a3ecd12.png": "/breaking-bad-app-react/static/media/star-wars.9a3ecd12.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dfbf2355.js",
+    "static/js/2.a8626c65.chunk.js",
+    "static/css/main.65b79d41.chunk.css",
+    "static/js/main.7be87815.chunk.js"
+  ]
+}
